@@ -5,10 +5,18 @@
 import NFT from "./domain/NFT";
 
 function collectionHasNft(collection: NFT[], nft: NFT): boolean {
+    let answer:boolean= false;
     collection.find((element) => {
-        if (element === nft) return true;
+        
+        // console.log(`element ${element.imageURL} ${element.name}`)
+        // console.log(`nft var ${nft.imageURL} ${nft.name}`)
+        if (element.imageURL === nft.imageURL && element.name===nft.name) {
+            answer = true;
+        }
+        else answer = false
+    
     })
-    return false;
+ return answer;
 
 }
 export default collectionHasNft

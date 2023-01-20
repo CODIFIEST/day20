@@ -16,5 +16,5 @@ let nft: NFT = {
 }
 
 it('should search the array for the nft and if it exists, return true', ()=>{
-    expect(collectionHasNft(nfts, nft)).toBe(false)
+    expect(collectionHasNft(nfts, nft)).toBe(true)
 })
